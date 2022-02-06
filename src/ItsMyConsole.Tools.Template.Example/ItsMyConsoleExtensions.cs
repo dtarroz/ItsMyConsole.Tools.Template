@@ -1,4 +1,6 @@
-﻿namespace ItsMyConsole.Tools.Template.Example
+﻿using System;
+
+namespace ItsMyConsole.Tools.Template.Example
 {
     /// <summary>
     /// Extension de ItsMyConsole pour inclure les outils SWAPI
@@ -12,7 +14,10 @@
         /// </summary>
         /// <param name="ccli">La console qui configure SWAPI</param>
         /// <param name="swapiOption">Les options pour SWAPI</param>
-        public static void ConfigureSwapi(this ConsoleCommandLineInterpreter ccli, SwapiOption swapiOption) { }
+        public static void ConfigureSwapi(this ConsoleCommandLineInterpreter ccli, SwapiOption swapiOption) {
+            if (swapiOption == null)
+                throw new ArgumentNullException(nameof(swapiOption));
+        }
 
         /// <summary>
         /// L'accès à SWAPI
