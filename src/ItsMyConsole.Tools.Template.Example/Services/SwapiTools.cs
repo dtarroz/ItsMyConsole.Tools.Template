@@ -29,6 +29,8 @@ namespace ItsMyConsole.Tools.Template.Example
         public async Task<List<People>> SearchPeople(string name) {
             if (name == null)
                 throw new ArgumentNullException(nameof(name));
+            if (name == "")
+                throw new ArgumentException(nameof(name), "Le nom est obligatoire");
             await Task.Delay(0);
             return null;
         }
