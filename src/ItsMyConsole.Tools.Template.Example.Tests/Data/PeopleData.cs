@@ -64,7 +64,7 @@ public class PeopleData : IEnumerable<object[]>
     private static object[] GetSearchAh() {
         List<People> peoples = new List<People> {
             new() {
-                Id = 13,
+                Id = 4,
                 Name = "Darth Vader"
             },
             new() {
@@ -76,7 +76,7 @@ public class PeopleData : IEnumerable<object[]>
                 Name = "Biggs Darklighter"
             },
             new() {
-                Id = 9,
+                Id = 12,
                 Name = "Wilhuff Tarkin"
             },
             new() {
