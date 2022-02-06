@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageVersion>0.1.0</PackageVersion>
+    <Title>ItsMyConsole.Tools.Template.Example</Title>
+    <Authors>Damien TARROZ</Authors>
+    <Description>Example de template pour la création d'outil pour le Framework ItsMyConsole</Description>
+    <Copyright>Copyright © 2022 Damien TARROZ</Copyright>
+    <PackageProjectUrl>https://github.com/dtarroz/ItsMyConsole.Tools.Template.Example</PackageProjectUrl>
+    <AssemblyVersion>0.1.0</AssemblyVersion>
+    <FileVersion>0.1.0</FileVersion>
+    <PackageIcon>logo.png</PackageIcon>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageTags>console cli template example</PackageTags>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DocumentationFile>bin\Release\ItsMyConsole.Tools.Template.Example.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ItsMyConsole" Version="0.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\docs\logo.png" Pack="true" PackagePath="" />
+    <None Remove="ItsMyConsole.Tools.Template.Example.csproj.DotSettings" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
+      <_Parameter1>ItsMyConsole.Tools.Template.Example.Tests</_Parameter1>
+    </AssemblyAttribute>
+  </ItemGroup>
+
+</Project>
