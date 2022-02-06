@@ -27,7 +27,7 @@ public class ItsMyConsoleExtensions_ConfigureSwapi_Tests
         ConsoleCommandLineInterpreter ccli = new ConsoleCommandLineInterpreter();
         SwapiOption swapiOption = new SwapiOption { MaxResultSearchPeople = maxResultSearchPeople };
 
-        Assert.Throws<ArgumentException>(() => ccli.ConfigureSwapi(swapiOption));
+        Assert.Throws<ArgumentOutOfRangeException>(() => ccli.ConfigureSwapi(swapiOption));
     }
 
     [Theory]

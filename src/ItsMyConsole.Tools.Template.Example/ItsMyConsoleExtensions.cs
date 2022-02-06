@@ -17,6 +17,9 @@ namespace ItsMyConsole.Tools.Template.Example
         public static void ConfigureSwapi(this ConsoleCommandLineInterpreter ccli, SwapiOption swapiOption) {
             if (swapiOption == null)
                 throw new ArgumentNullException(nameof(swapiOption));
+            if (swapiOption.MaxResultSearchPeople < 1 || swapiOption.MaxResultSearchPeople > 10)
+                throw new ArgumentOutOfRangeException(nameof(swapiOption.MaxResultSearchPeople),
+                                                      swapiOption.MaxResultSearchPeople, "Valeur comprise entre 1 et 10 inclus");
         }
 
         /// <summary>
