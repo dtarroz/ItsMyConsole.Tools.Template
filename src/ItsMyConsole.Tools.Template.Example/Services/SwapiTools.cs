@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace ItsMyConsole.Tools.Template.Example
@@ -26,6 +27,8 @@ namespace ItsMyConsole.Tools.Template.Example
         /// </summary>
         /// <param name="name">Le nom de personne à chercher</param>
         public async Task<List<People>> SearchPeople(string name) {
+            if (name == null)
+                throw new ArgumentNullException(nameof(name));
             await Task.Delay(0);
             return null;
         }

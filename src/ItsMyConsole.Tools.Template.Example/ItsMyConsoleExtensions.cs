@@ -7,7 +7,7 @@ namespace ItsMyConsole.Tools.Template.Example
     /// </summary>
     public static class ItsMyConsoleExtensions
     {
-        private static readonly SwapiOption SwapiOption = new SwapiOption();
+        private static SwapiOption _swapiOption = new SwapiOption();
 
         /// <summary>
         /// Configuration de SWAPI pour son utilisation pendant l'exécution d'une ligne de commande
@@ -20,6 +20,7 @@ namespace ItsMyConsole.Tools.Template.Example
             if (swapiOption.MaxResultSearchPeople < 1 || swapiOption.MaxResultSearchPeople > 10)
                 throw new ArgumentOutOfRangeException(nameof(swapiOption.MaxResultSearchPeople),
                                                       swapiOption.MaxResultSearchPeople, "Valeur comprise entre 1 et 10 inclus");
+            _swapiOption = swapiOption;
         }
 
         /// <summary>
@@ -27,7 +28,7 @@ namespace ItsMyConsole.Tools.Template.Example
         /// </summary>
         /// <param name="commandTools">Les outils de commandes pour accéder à SWAPI</param>
         public static SwapiTools Swapi(this CommandTools commandTools) {
-            return null;
+            return new SwapiTools(_swapiOption);
         }
     }
 }
