@@ -33,7 +33,7 @@ namespace MyExampleConsole
                     foreach (People people in peoples)
                         Console.WriteLine(people.Name);
                 else
-                    Console.WriteLine("Aucune personne trouvée");
+                    Console.WriteLine("Aucun personnage trouvé");
             });
 
             await ccli.RunAsync();

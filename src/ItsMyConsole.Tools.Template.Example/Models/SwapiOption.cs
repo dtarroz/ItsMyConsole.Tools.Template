@@ -6,7 +6,7 @@
     public class SwapiOption
     {
         /// <summary>
-        /// Nombre de résultat maximum pour une recherche de personne.<br/>
+        /// Nombre de résultat maximum pour la recherche de personnage.<br/>
         /// Valeur entre 1 et 10 inclus.
         /// </summary>
         public int MaxResultSearchPeople { get; set; } = 10;

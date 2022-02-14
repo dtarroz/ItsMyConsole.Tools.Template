@@ -20,16 +20,16 @@ namespace ItsMyConsole.Tools.Template.Example
         }
 
         /// <summary>
-        /// Récupération du nombre de résultat maximum pour une recherche de personne
+        /// Récupération du nombre de résultat maximum pour la recherche de personnages
         /// </summary>
         public int GetMaxResultSearchPeople() {
             return _swapiOption.MaxResultSearchPeople;
         }
 
         /// <summary>
-        /// Recherche des personnes à partir d'un nom
+        /// Recherche des personnages à partir d'un nom
         /// </summary>
-        /// <param name="name">Le nom de personne à chercher</param>
+        /// <param name="name">Le nom des personnages à chercher</param>
         public async Task<List<People>> SearchPeople(string name) {
             if (name == null)
                 throw new ArgumentNullException(nameof(name));
